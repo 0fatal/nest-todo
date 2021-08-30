@@ -1,6 +1,8 @@
 import { CACHE_MANAGER, Controller, Get, Inject, Post } from '@nestjs/common'
 import { Cache } from 'cache-manager'
+import { SkipJwtAuth } from '../auth/constants'
 
+@SkipJwtAuth()
 @Controller('count')
 export class CountController {
   constructor(
