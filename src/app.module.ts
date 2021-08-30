@@ -12,9 +12,11 @@ import { CountModule } from './count/count.module'
 import { StaticModule } from './static/static.module'
 import { QuoteModule } from './quote/quote.module'
 import { UploadModule } from './upload/upload.module'
+import { LogModule } from './log/log.module'
 
 const businessModules = [
   AuthModule,
+  LogModule,
   UserModule,
   TodoModule,
   CountModule,
