@@ -7,11 +7,19 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
 import loadConfig from './config/configurations'
 import { AuthModule } from './auth/auth.module'
 import { TodoModule } from './todo/todo.module'
-import { CountService } from './count/count.service'
 import { CountController } from './count/count.controller'
 import { CountModule } from './count/count.module'
+import { StaticModule } from './static/static.module'
+import { QuoteModule } from './quote/quote.module'
 
-const businessModules = [AuthModule, UserModule, TodoModule, CountModule]
+const businessModules = [
+  AuthModule,
+  UserModule,
+  TodoModule,
+  CountModule,
+  StaticModule,
+  QuoteModule,
+]
 
 const libModules = [
   ConfigModule.forRoot({
@@ -41,6 +49,6 @@ const libModules = [
 @Module({
   imports: [...libModules, ...businessModules],
   controllers: [AppController, CountController],
-  providers: [AppService, CountService],
+  providers: [AppService],
 })
 export class AppModule {}
