@@ -11,6 +11,7 @@ import { CountController } from './count/count.controller'
 import { CountModule } from './count/count.module'
 import { StaticModule } from './static/static.module'
 import { QuoteModule } from './quote/quote.module'
+import { UploadModule } from './upload/upload.module'
 
 const businessModules = [
   AuthModule,
@@ -19,6 +20,7 @@ const businessModules = [
   CountModule,
   StaticModule,
   QuoteModule,
+  UploadModule,
 ]
 
 const libModules = [

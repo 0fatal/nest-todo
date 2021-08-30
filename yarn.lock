@@ -1020,6 +1020,13 @@
   resolved "https://registry.nlark.com/@types/mockjs/download/@types/mockjs-1.0.4.tgz?cache=0&sync_timestamp=1629708396524&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fmockjs%2Fdownload%2F%40types%2Fmockjs-1.0.4.tgz#e706951d5e33b4f0a4bb73b1f8b124e26f081de0"
   integrity sha1-5waVHV4ztPCku3Ox+LEk4m8IHeA=
 
+"@types/multer@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.nlark.com/@types/multer/download/@types/multer-1.4.7.tgz#89cf03547c28c7bbcc726f029e2a76a7232cc79e"
+  integrity sha1-ic8DVHwox7vMcm8Cnip2pyMsx54=
+  dependencies:
+    "@types/express" "*"
+
 "@types/node@*":
   version "16.7.2"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.7.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.7.2.tgz#0465a39b5456b61a04d98bd5545f8b34be340cb7"
@@ -2603,7 +2610,7 @@ expect@^27.0.6:
     jest-message-util "^27.0.6"
     jest-regex-util "^27.0.6"
 
-express@4.17.1:
+express@4.17.1, express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.nlark.com/express/download/express-4.17.1.tgz?cache=0&sync_timestamp=1618847120573&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fexpress%2Fdownload%2Fexpress-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha1-RJH8OGBc9R+GKdOcK10Cb5ikwTQ=
@@ -4137,7 +4144,7 @@ minizlib@^2.1.1:
     minipass "^3.0.0"
     yallist "^4.0.0"
 
-mkdirp@^0.5.1:
+mkdirp@^0.5.1, mkdirp@^0.5.4:
   version "0.5.5"
   resolved "https://registry.nlark.com/mkdirp/download/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
   integrity sha1-2Rzv1i0UNsoPQWIOJRKI1CAJne8=
@@ -4185,6 +4192,20 @@ multer@1.4.2:
     busboy "^0.2.11"
     concat-stream "^1.5.2"
     mkdirp "^0.5.1"
+    object-assign "^4.1.1"
+    on-finished "^2.3.0"
+    type-is "^1.6.4"
+    xtend "^4.0.0"
+
+multer@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.nlark.com/multer/download/multer-1.4.3.tgz?cache=0&sync_timestamp=1628498922819&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmulter%2Fdownload%2Fmulter-1.4.3.tgz#4db352d6992e028ac0eacf7be45c6efd0264297b"
+  integrity sha1-TbNS1pkuAorA6s975Fxu/QJkKXs=
+  dependencies:
+    append-field "^1.0.0"
+    busboy "^0.2.11"
+    concat-stream "^1.5.2"
+    mkdirp "^0.5.4"
     object-assign "^4.1.1"
     on-finished "^2.3.0"
     type-is "^1.6.4"
