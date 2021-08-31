@@ -8,6 +8,10 @@ const loadConfig = () => {
       username: env.TYPEORM_USERNAME,
       password: env.TYPEORM_PASSWORD,
     },
+    redis: {
+      host: env.REDIS_HOST,
+      port: env.REDIS_PORT,
+    },
   }
 }
 

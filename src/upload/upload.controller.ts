@@ -1,9 +1,10 @@
-import { Post, UploadedFile, UseInterceptors } from '@nestjs/common'
+import { Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common'
 import { FileInterceptor } from '@nestjs/platform-express'
 import { Express } from 'express'
 
 export const staticBaseUrl = 'http://localhost:3000/api/static/'
 
+@Controller('upload')
 export class UploadController {
   @Post('file')
   @UseInterceptors(FileInterceptor('file'))
