@@ -3,12 +3,10 @@ import { CreateUserDTO } from './dto/create-user.dto'
 import { User } from './entity/user.entity'
 import { UpdateUserDTO } from './dto/update-user.dto'
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
-import { InjectRepository } from '@nestjs/typeorm'
-import { Repository } from 'typeorm/repository/Repository'
 import { UserDTO } from './dto/user.dto'
-import { toUserDTO } from 'src/shared/mapper'
 import { LoginUserDTO } from './dto/user-login.dto'
 import { comparePassword } from '../shared/utils'
+import { toUserDTO } from '../shared/mapper'
 
 @Injectable()
 export class UserService {
@@ -55,7 +53,7 @@ export class UserService {
 
   async findOneByOption(options?: Record<string, unknown>): Promise<UserDTO> {
     const user = await this.userRepository.findOne(options)
-    return toUserDTO(user)
+    return user
   }
 
   async findByUsername(username: string) {

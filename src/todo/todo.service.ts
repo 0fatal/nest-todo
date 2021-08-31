@@ -1,12 +1,11 @@
-import { InjectRepository } from '@nestjs/typeorm'
 import { TodoRepository } from './repository/todo.repository'
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { UserService } from '../user/user.service'
 import { Todo } from './entity/todo.entity'
 import { TodoDTO } from './dto/todo.dto'
-import { toTodoDTO } from 'src/shared/mapper'
 import { CreateTodoDTO } from './dto/todo.create.dto'
 import { UserDTO } from '../user/dto/user.dto'
+import { toTodoDTO } from '../shared/mapper'
 
 @Injectable()
 export class TodoService {
@@ -46,9 +45,11 @@ export class TodoService {
       },
     })
 
-    const todo: Todo = await this.todoRepository.create({
+    console.log(owner)
+
+    const todo: Todo = this.todoRepository.create({
       ...createTodo,
-      owner,
+      owner: owner,
     })
 
     await this.todoRepository.save(todo)

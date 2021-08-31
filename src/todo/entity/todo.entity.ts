@@ -4,6 +4,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
@@ -30,7 +31,14 @@ export class Todo {
   @Column('int', { default: TodoStatus.TODO })
   status?: TodoStatus
 
+  @Column()
+  ownerId: string
+
   @ManyToOne(() => User, user => user.todos)
+  @JoinColumn({
+    name: 'ownerId',
+    referencedColumnName: 'id',
+  })
   owner: User
 
   @OneToMany(() => Task, task => task.todo)
