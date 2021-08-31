@@ -13,6 +13,7 @@ import { StaticModule } from './static/static.module'
 import { QuoteModule } from './quote/quote.module'
 import { UploadModule } from './upload/upload.module'
 import { LogModule } from './log/log.module'
+import { ScheduleModule } from '@nestjs/schedule'
 
 const businessModules = [
   AuthModule,
@@ -30,6 +31,7 @@ const libModules = [
     load: [loadConfig],
     envFilePath: '.env',
   }),
+  ScheduleModule.forRoot(),
   TypeOrmModule.forRootAsync({
     imports: [ConfigModule],
     inject: [ConfigService],
